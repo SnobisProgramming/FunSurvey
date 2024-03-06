@@ -9,21 +9,27 @@
         </div>
     </div>
 
-    <div class="container mt-3">
+    <div class="row">
+    <div class="col-sm-12">
             <h2>Response Statistics</h2>
             <div class="table-responsive">
                 <table class="table table-striped">
                     {{ descrip|safe }}
                 </table>
             </div>
+        </div>
     </div>
 
-    <div class="container mt-3">
+    <div class="row">
+    <div class="col-sm-12">
             <h2 class="subtitle">Results</h2>
                 {{ value_counts|safe }}
     </div>
+    </div>
 
-    <div class="container mt-3">
+
+    <div class="row">
+    <div class="col-sm-12">
     <h2>Here is the chart of:</h2>
             <div class="card">
                 <div class="card-body">
@@ -33,6 +39,7 @@
                     </div>
                 </div>
             </div>
+    </div>
     </div>
 
 {% endblock %}
