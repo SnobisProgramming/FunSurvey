@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block body %}
+
     <div class="row">
         <div class="col-sm-12">
             <h1>{{ title }}</h1>
@@ -8,32 +9,30 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm-12">
+    <div class="container mt-3">
             <h2>Response Statistics</h2>
             <div class="table-responsive">
                 <table class="table table-striped">
                     {{ descrip|safe }}
                 </table>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <h2 class="subtitle">Results</h2>
-                {{ value_counts|safe }}
-        </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card border-primary">
+    <div class="container mt-3">
+            <h2 class="subtitle">Results</h2>
+                {{ value_counts|safe }}
+    </div>
+
+    <div class="container mt-3">
+    <h2>Here is the chart of:</h2>
+            <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title subtitle">Chart</h2>
+                    <div class="card-header"><b>{{ title }}</b></div>
+                    <div class="card-body">
                     <img class="img-fluid" src="{{ chart_url }}" alt="Count Plot {{ title }}">
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
 
 {% endblock %}
